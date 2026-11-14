@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sadam Scott | Real Estate Portfolio</title>
+  <meta name="description" content="Sadam Scott — Real Estate Portfolio. Curating exceptional properties and spaces in Lagos." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: {
+              50: '#f8f7f4',
+              100: '#f0ece4',
+              200: '#e0d8c8',
+              300: '#c9bea8',
+              800: '#2c2a26',
+              900: '#1a1917',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(26,25,23,0.4) 0%, rgba(26,25,23,0.7) 100%);
+    }
+    #lightbox { display: none; }
+    #lightbox.active { display: flex; }
+    body.lightbox-open { overflow: hidden; }
+    
+    /* Subtle fade-in animation */
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-primary-50 text-primary-900 font-sans antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-primary-200/50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="font-serif text-2xl font-semibold tracking-tight">Sadam Scott</a>
+      
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#projects" class="hover:text-primary-800/70 transition">Projects</a>
+        <a href="#services" class="hover:text-primary-800/70 transition">Services</a>
+        <a href="#about" class="hover:text-primary-800/70 transition">About</a>
+        <a href="#contact" class="hover:text-primary-800/70 transition">Contact</a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden p-2" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-primary-200">
+      <div class="px-6 py-5 flex flex-col gap-1 text-sm font-medium">
+        <a href="#projects" class="py-3 mobile-link">Projects</a>
+        <a href="#services" class="py-3 mobile-link">Services</a>
+        <a href="#about" class="py-3 mobile-link">About</a>
+        <a href="#contact" class="py-3 mobile-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen min-h-[680px] flex items-center justify-center overflow-hidden">
+    <img 
+      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
+      alt="Modern luxury home" 
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 hero-overlay"></div>
+    
+    <div class="relative z-10 text-center text-white px-6 max-w-4xl fade-in">
+      <p class="text-sm uppercase tracking-[0.3em] mb-5 opacity-90">Real Estate Portfolio</p>
+      <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl font-medium leading-tight mb-6">
+        Sadam Scott
+      </h1>
+      <p class="text-lg sm:text-xl font-light max-w-xl mx-auto mb-12 opacity-95 leading-relaxed">
+        Helping clients find exceptional properties and make confident real estate decisions in Lagos.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects" class="inline-block px-9 py-3.5 bg-white text-primary-900 font-medium text-sm tracking-wide hover:bg-primary-100 transition">
+          View Projects
+        </a>
+        <a href="#contact" class="inline-block px-9 py-3.5 border border-white/70 text-white font-medium text-sm tracking-wide hover:bg-white/10 transition">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <p class="text-sm uppercase tracking-[0.2em] text-primary-800/60 mb-3">Selected Work</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-medium">Featured Projects</h2>
+        </div>
+        <p class="text-primary-800/70 max-w-md text-sm leading-relaxed">
+          A selection of properties that reflect quality, strong locations, and lasting value.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <article class="group">
+          <div class="relative overflow-hidden aspect-[4/3] mb-5 bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Lakeside Contemporary Villa" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-white/95 text-primary-900 text-xs font-medium px-3 py-1.5 tracking-wide">Sold</span>
+            </div>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-1">Lakeside Contemporary Villa</h3>
+          <p class="text-sm text-primary-800/70 mb-1">Victoria Island, Lagos</p>
+          <p class="text-sm font-medium">₦850,000,000</p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="group">
+          <div class="relative overflow-hidden aspect-[4/3] mb-5 bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Skyline Residences" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-white/95 text-primary-900 text-xs font-medium px-3 py-1.5 tracking-wide">Featured</span>
+            </div>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-1">Skyline Residences</h3>
+          <p class="text-sm text-primary-800/70 mb-1">Ikoyi, Lagos</p>
+          <p class="text-sm font-medium">₦420,000,000</p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="group">
+          <div class="relative overflow-hidden aspect-[4/3] mb-5 bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Palm Grove Estate" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-white/95 text-primary-900 text-xs font-medium px-3 py-1.5 tracking-wide">Sold</span>
+            </div>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-1">Palm Grove Estate</h3>
+          <p class="text-sm text-primary-800/70 mb-1">Lekki Phase 1, Lagos</p>
+          <p class="text-sm font-medium">₦1,150,000,000</p>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="group">
+          <div class="relative overflow-hidden aspect-[4/3] mb-5 bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="The Oak Residence" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-1">The Oak Residence</h3>
+          <p class="text-sm text-primary-800/70 mb-1">Banana Island, Lagos</p>
+          <p class="text-sm font-medium">₦2,400,000,000</p>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="group">
+          <div class="relative overflow-hidden aspect-[4/3] mb-5 bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Waterfront Apartments" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-1">Waterfront Apartments</h3>
+          <p class="text-sm text-primary-800/70 mb-1">Eko Atlantic, Lagos</p>
+          <p class="text-sm font-medium">From ₦280,000,000</p>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="group">
+          <div class="relative overflow-hidden aspect-[4/3] mb-5 bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1600&q=80">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80" alt="Harbor View Duplex" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+            <div class="absolute top-4 left-4">
+              <span class="bg-white/95 text-primary-900 text-xs font-medium px-3 py-1.5 tracking-wide">Available</span>
+            </div>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-1">Harbor View Duplex</h3>
+          <p class="text-sm text-primary-800/70 mb-1">Oniru, Lagos</p>
+          <p class="text-sm font-medium">₦675,000,000</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 md:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-sm uppercase tracking-[0.2em] text-primary-800/60 mb-3">What I Offer</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-medium">Services</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 bg-primary-100 flex items-center justify-center mb-6 mx-auto md:mx-0">
+            <svg class="w-6 h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-3">Buying & Selling</h3>
+          <p class="text-sm text-primary-800/70 leading-relaxed">
+            Guidance through the entire process of buying or selling a property, from valuation to closing.
+          </p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 bg-primary-100 flex items-center justify-center mb-6 mx-auto md:mx-0">
+            <svg class="w-6 h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-3">Investment Advisory</h3>
+          <p class="text-sm text-primary-800/70 leading-relaxed">
+            Helping clients identify high-potential properties and build a strong real estate portfolio.
+          </p>
+        </div>
+
+        <div class="text-center md:text-left">
+          <div class="w-12 h-12 bg-primary-100 flex items-center justify-center mb-6 mx-auto md:mx-0">
+            <svg class="w-6 h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-medium mb-3">Property Consultation</h3>
+          <p class="text-sm text-primary-800/70 leading-relaxed">
+            Personalized advice on locations, market trends, and choosing the right property for your goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-[0.2em] text-primary-800/60 mb-4">About</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-medium mb-8 leading-tight">
+            Building trust through thoughtful real estate.
+          </h2>
+          <div class="space-y-5 text-primary-800/80 leading-relaxed">
+            <p>
+              I’m Sadam Scott, a real estate professional focused on connecting people with properties that match their lifestyle and long-term goals.
+            </p>
+            <p>
+              Whether you’re buying your first home, expanding your investment portfolio, or looking for a carefully selected space, I bring a clear, client-first approach to every transaction.
+            </p>
+            <p>
+              My work centers on quality locations, transparent communication, and results that stand the test of time.
+            </p>
+          </div>
+          
+          <div class="mt-12 flex flex-wrap gap-10">
+            <div>
+              <p class="font-serif text-3xl font-medium">50+</p>
+              <p class="text-sm text-primary-800/60 mt-1">Projects Completed</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-medium">8+</p>
+              <p class="text-sm text-primary-800/60 mt-1">Years Experience</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-medium">Lagos</p>
+              <p class="text-sm text-primary-800/60 mt-1">Primary Market</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[4/5] overflow-hidden bg-primary-200 cursor-pointer project-img" data-full="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Professional workspace" class="w-full h-full object-cover" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 border border-primary-300 -z-10 hidden lg:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 md:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <p class="text-sm uppercase tracking-[0.2em] text-primary-800/60 mb-4">Contact</p>
+          <h2 class="font-serif text-4xl md:text-5xl font-medium mb-6">Let’s talk about your next property.</h2>
+          <p class="text-primary-800/70 leading-relaxed mb-10 max-w-md">
+            Whether you’re ready to buy, sell, or simply exploring options, I’m here to help with clear advice and dedicated support.
+          </p>
+          
+          <div class="space-y-6 text-sm">
+            <div>
+              <p class="text-primary-800/50 mb-1">Email</p>
+              <a href="mailto:hello@sadamscott.com" class="font-medium hover:underline">hello@sadamscott.com</a>
+            </div>
+            <div>
+              <p class="text-primary-800/50 mb-1">Phone</p>
+              <a href="tel:+2348000000000" class="font-medium hover:underline">+234 800 000 0000</a>
+            </div>
+            <div>
+              <p class="text-primary-800/50 mb-1">Location</p>
+              <p class="font-medium">Lagos, Nigeria</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-primary-50 p-8 md:p-10 border border-primary-200">
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-3 border border-primary-200 bg-white focus:outline-none focus:border-primary-800 transition"
+                placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 border border-primary-200 bg-white focus:outline-none focus:border-primary-800 transition"
+                placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full px-4 py-3 border border-primary-200 bg-white focus:outline-none focus:border-primary-800 transition resize-none"
+                placeholder="Tell me about what you're looking for..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-3.5 bg-primary-900 text-white font-medium text-sm tracking-wide hover:bg-primary-800 transition">
+              Send Message
+            </button>
+          </form>
+          <p id="form-success" class="hidden mt-4 text-sm text-green-700 text-center">
+            Thank you — your message has been received. I’ll be in touch soon.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-primary-200 py-10 bg-primary-50">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-800/60">
+      <p>© 2026 Sadam Scott. All rights reserved.</p>
+      <p class="font-serif text-primary-900 text-base">Sadam Scott</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-5 right-5 text-white/80 hover:text-white text-4xl leading-none z-10" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="Enlarged property" class="max-w-full max-h-[90vh] object-contain rounded" />
+  </div>
+
+  <script>
+    // Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      if (!mobileMenu.classList.contains('hidden')) closeMobileMenu();
+    }, { passive: true });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.project-img').forEach(el => {
+      el.addEventListener('click', () => {
+        lightboxImg.src = el.getAttribute('data-full');
+        lightbox.classList.add('active');
+        document.body.classList.add('lightbox-open');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.classList.remove('lightbox-open');
+      lightboxImg.src = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        closeMobileMenu();
+      }
+    });
+
+    // Contact Form
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.target.classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
