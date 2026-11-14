@@ -143,126 +143,217 @@
       </div>
     </header>
 
-    <!-- Hero -->
-    <section
-      id="home"
-      class="relative min-h-[620px] h-[88vh] flex items-end pt-[72px]"
-    >
-      <img
-        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
-        alt="Modern home with landscaped garden in Lagos"
-        class="absolute inset-0 w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 hero-shade"></div>
-      <div
-        class="relative max-w-6xl mx-auto px-5 pb-16 md:pb-24 w-full text-white"
+    <div id="main-view">
+      <!-- Hero -->
+      <section
+        id="home"
+        class="relative min-h-[620px] h-[88vh] flex items-end pt-[72px]"
       >
-        <p class="text-xs tracking-[0.18em] mb-4 text-white/90">
-          HARBORLINE REALTY • LAGOS
-        </p>
-        <h1
-          class="font-serif text-[2.9rem] sm:text-6xl md:text-7xl leading-[1.05] max-w-2xl"
-        >
-          Find Your Next Property in Lagos
-        </h1>
-        <p class="mt-5 text-lg text-white/90 max-w-md leading-relaxed">
-          Explore homes for sale and get guidance on buying, selling, or
-          investing.
-        </p>
-        <div class="mt-8 flex flex-col items-start gap-5">
-          <a
-            href="#properties"
-            class="px-9 py-4 bg-cream text-ink font-medium rounded-lg hover:bg-white transition"
-            >View Properties</a
-          >
-          <a
-            href="#contact"
-            class="text-white border-b border-white/80 pb-0.5 hover:text-gold hover:border-gold transition"
-            >Get in Touch</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- Properties -->
-    <section id="properties" class="py-16 md:py-24">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="font-serif text-4xl md:text-5xl mb-10">
-          Featured Properties
-        </h2>
-        <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3" id="grid"></div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-16 md:py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-5">
-        <h2 class="font-serif text-4xl md:text-5xl mb-10">How We Help</h2>
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="p-7 rounded-2xl border border-gold/40 bg-cream">
-            <h3 class="font-serif text-2xl mb-2">Buying &amp; Selling</h3>
-            <p class="text-ink/70 leading-relaxed">
-              Support through the whole process, from valuation to closing.
-            </p>
-          </div>
-          <div class="p-7 rounded-2xl border border-gold/40 bg-cream">
-            <h3 class="font-serif text-2xl mb-2">Investment Advisory</h3>
-            <p class="text-ink/70 leading-relaxed">
-              Find high-potential properties and build a stronger portfolio.
-            </p>
-          </div>
-          <div class="p-7 rounded-2xl border border-gold/40 bg-cream">
-            <h3 class="font-serif text-2xl mb-2">Property Consultation</h3>
-            <p class="text-ink/70 leading-relaxed">
-              Advice on locations, market trends and the right fit for your
-              goals.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-16 md:py-24">
-      <div
-        class="max-w-6xl mx-auto px-5 grid gap-12 lg:grid-cols-2 items-center"
-      >
-        <div>
-          <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">
-            Thoughtful real estate, built on trust.
-          </h2>
-          <div class="space-y-4 text-ink/75 leading-relaxed text-[1.05rem]">
-            <p>
-              At Harborline Realty, we connect people with properties that match
-              their lifestyle and long-term goals.
-            </p>
-            <p>
-              Whether you’re buying your first home or growing an investment
-              portfolio, you get a clear, client-first approach and honest
-              communication at every step.
-            </p>
-          </div>
-          <dl class="mt-10 flex gap-10 border-t border-gold/60 pt-6">
-            <div>
-              <dt class="text-sm text-ink/60">Projects completed</dt>
-              <dd class="font-serif text-3xl">50+</dd>
-            </div>
-            <div>
-              <dt class="text-sm text-ink/60">Years experience</dt>
-              <dd class="font-serif text-3xl">8+</dd>
-            </div>
-          </dl>
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
+          alt="Modern home with landscaped garden in Lagos"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 hero-shade"></div>
         <div
-          class="aspect-[4/5] rounded-2xl overflow-hidden bg-ink/10 cursor-pointer project-img"
-          data-full="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+          class="relative max-w-6xl mx-auto px-5 pb-16 md:pb-24 w-full text-white"
+        >
+          <p class="text-xs tracking-[0.18em] mb-4 text-white/90">
+            HARBORLINE REALTY • LAGOS
+          </p>
+          <h1
+            class="font-serif text-[2.9rem] sm:text-6xl md:text-7xl leading-[1.05] max-w-2xl"
+          >
+            Find Your Next Property in Lagos
+          </h1>
+          <p class="mt-5 text-lg text-white/90 max-w-md leading-relaxed">
+            Explore homes for sale and get guidance on buying, selling, or
+            investing.
+          </p>
+          <div class="mt-8 flex flex-col items-start gap-5">
+            <a
+              href="#properties"
+              class="px-9 py-4 bg-cream text-ink font-medium rounded-lg hover:bg-white transition"
+              >View Properties</a
+            >
+            <a
+              href="#contact"
+              class="text-white border-b border-white/80 pb-0.5 hover:text-gold hover:border-gold transition"
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Properties -->
+      <section id="properties" class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-5">
+          <h2 class="font-serif text-4xl md:text-5xl mb-10">
+            Featured Properties
+          </h2>
+          <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3" id="grid"></div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+          <h2 class="font-serif text-4xl md:text-5xl mb-10">How We Help</h2>
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="p-7 rounded-2xl border border-gold/40 bg-cream">
+              <h3 class="font-serif text-2xl mb-2">Buying &amp; Selling</h3>
+              <p class="text-ink/70 leading-relaxed">
+                Support through the whole process, from valuation to closing.
+              </p>
+            </div>
+            <div class="p-7 rounded-2xl border border-gold/40 bg-cream">
+              <h3 class="font-serif text-2xl mb-2">Investment Advisory</h3>
+              <p class="text-ink/70 leading-relaxed">
+                Find high-potential properties and build a stronger portfolio.
+              </p>
+            </div>
+            <div class="p-7 rounded-2xl border border-gold/40 bg-cream">
+              <h3 class="font-serif text-2xl mb-2">Property Consultation</h3>
+              <p class="text-ink/70 leading-relaxed">
+                Advice on locations, market trends and the right fit for your
+                goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="py-16 md:py-24">
+        <div
+          class="max-w-6xl mx-auto px-5 grid gap-12 lg:grid-cols-2 items-center"
+        >
+          <div>
+            <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">
+              Thoughtful real estate, built on trust.
+            </h2>
+            <div class="space-y-4 text-ink/75 leading-relaxed text-[1.05rem]">
+              <p>
+                At Harborline Realty, we connect people with properties that
+                match their lifestyle and long-term goals.
+              </p>
+              <p>
+                Whether you’re buying your first home or growing an investment
+                portfolio, you get a clear, client-first approach and honest
+                communication at every step.
+              </p>
+            </div>
+            <dl class="mt-10 flex gap-10 border-t border-gold/60 pt-6">
+              <div>
+                <dt class="text-sm text-ink/60">Projects completed</dt>
+                <dd class="font-serif text-3xl">50+</dd>
+              </div>
+              <div>
+                <dt class="text-sm text-ink/60">Years experience</dt>
+                <dd class="font-serif text-3xl">8+</dd>
+              </div>
+            </dl>
+          </div>
+          <div
+            class="aspect-[4/5] rounded-2xl overflow-hidden bg-ink/10 cursor-pointer project-img"
+            data-full="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
+              alt="Harborline Realty office"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Property detail -->
+    <section id="detail" class="hidden pt-[72px] bg-cream">
+      <div class="max-w-3xl mx-auto px-5 py-8 md:py-12">
+        <a
+          href="#properties"
+          class="inline-flex items-center gap-2 font-serif text-lg mb-6 hover:text-gold transition"
+          >← Featured Properties</a
+        >
+        <div
+          class="relative aspect-[4/3] md:aspect-[16/10] rounded-2xl overflow-hidden bg-ink/10"
         >
           <img
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
-            alt="Harborline Realty office"
-            class="w-full h-full object-cover"
-            loading="lazy"
+            id="d-img"
+            src=""
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
           />
+          <span
+            id="d-status"
+            class="absolute top-4 left-4 bg-cream/95 text-sm font-medium px-3.5 py-1 rounded-lg"
+          ></span>
+        </div>
+        <h2
+          id="d-title"
+          class="font-serif text-4xl md:text-5xl mt-6 leading-tight"
+        ></h2>
+        <p id="d-loc" class="text-ink/60 text-lg mt-1"></p>
+        <div class="border-t border-gold/60 mt-6 pt-5">
+          <p id="d-price" class="text-3xl font-semibold"></p>
+          <div
+            class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-3 text-ink/75"
+          >
+            <span class="inline-flex items-center gap-2"
+              ><svg
+                class="w-5 h-5 text-gold"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9" /></svg
+              ><span id="d-beds"></span
+            ></span>
+            <span class="inline-flex items-center gap-2"
+              ><svg
+                class="w-5 h-5 text-gold"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.7 3 4 3.7 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5M10 5 8 7M2 12h20M7 19l-1 2M18 19l1 2"
+                /></svg
+              ><span id="d-baths"></span
+            ></span>
+            <span class="inline-flex items-center gap-2"
+              ><svg
+                class="w-5 h-5 text-gold"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                viewBox="0 0 24 24"
+              >
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg
+              ><span id="d-area"></span
+            ></span>
+            <span class="ml-auto text-sm bg-[#efe4d6] px-3 py-1 rounded-lg"
+              >Sample listing</span
+            >
+          </div>
+        </div>
+        <div class="border-t border-gold/60 mt-5 pt-6">
+          <a
+            id="d-tour"
+            href="#contact"
+            class="block w-full text-center py-4 bg-navy text-white font-serif text-xl rounded-lg hover:bg-ink transition"
+            >Schedule a Property Tour</a
+          >
         </div>
       </div>
     </section>
@@ -389,6 +480,9 @@
           t: "Harbor View Duplex",
           l: "Oniru, Lagos",
           p: "₦675,000,000",
+          b: 5,
+          ba: 6,
+          a: 480,
           s: "Available",
           i: "1605276374104-dee2a0ed3cd6",
         },
@@ -396,6 +490,9 @@
           t: "Lakeside Contemporary Villa",
           l: "Victoria Island, Lagos",
           p: "₦850,000,000",
+          b: 6,
+          ba: 7,
+          a: 620,
           s: "Sold",
           i: "1600596542815-ffad4c1539a9",
         },
@@ -403,6 +500,9 @@
           t: "Skyline Residences",
           l: "Ikoyi, Lagos",
           p: "₦420,000,000",
+          b: 3,
+          ba: 4,
+          a: 260,
           s: "Featured",
           i: "1600607687939-ce8a6c25118c",
         },
@@ -410,6 +510,9 @@
           t: "Palm Grove Estate",
           l: "Lekki Phase 1, Lagos",
           p: "₦1,150,000,000",
+          b: 7,
+          ba: 8,
+          a: 850,
           s: "Sold",
           i: "1613490493576-7fde63acd811",
         },
@@ -417,6 +520,9 @@
           t: "The Oak Residence",
           l: "Banana Island, Lagos",
           p: "₦2,400,000,000",
+          b: 8,
+          ba: 9,
+          a: 1100,
           s: "Available",
           i: "1600585154526-990dced4db0d",
         },
@@ -424,6 +530,9 @@
           t: "Waterfront Apartments",
           l: "Eko Atlantic, Lagos",
           p: "From ₦280,000,000",
+          b: 2,
+          ba: 3,
+          a: 140,
           s: "Available",
           i: "1512917774080-9991f1c4c750",
         },
@@ -432,7 +541,7 @@
         `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
       document.getElementById("grid").innerHTML = props
         .map(
-          (x) => `
+          (x, n) => `
   <article class="group bg-white rounded-2xl overflow-hidden shadow-[0_1px_10px_rgba(15,34,51,.08)] flex flex-col h-full">
     <div class="relative aspect-[4/3] w-full overflow-hidden cursor-zoom-in project-img" data-full="${u(x.i, 1600)}" role="button" tabindex="0" aria-label="View larger photo of ${x.t}">
       <img src="${u(x.i, 800)}" alt="${x.t}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" loading="lazy" />
@@ -443,12 +552,55 @@
       <p class="text-ink/60 mt-1 mb-4">${x.l}</p>
       <div class="border-t border-gold/60 mt-auto pt-4 flex flex-wrap items-center justify-between gap-3">
         <p class="font-semibold text-lg whitespace-nowrap">${x.p}</p>
-        <a href="#contact" class="px-4 py-2 border border-ink rounded-lg text-sm font-medium whitespace-nowrap hover:bg-ink hover:text-white transition">View Property →</a>
+        <a href="#property-${n}" class="px-4 py-2 border border-ink rounded-lg text-sm font-medium whitespace-nowrap hover:bg-ink hover:text-white transition">View Property →</a>
       </div>
     </div>
   </article>`,
         )
         .join("");
+
+      // Property detail view
+      const mainView = document.getElementById("main-view"),
+        detail = document.getElementById("detail");
+      let current = null;
+      function route() {
+        const m = location.hash.match(/^#property-(\d+)$/);
+        if (m && props[m[1]]) {
+          const x = props[m[1]];
+          current = x;
+          document.getElementById("d-img").src = u(x.i, 1400);
+          document.getElementById("d-img").alt = x.t;
+          document.getElementById("d-status").textContent = x.s;
+          document.getElementById("d-title").textContent = x.t;
+          document.getElementById("d-loc").textContent = x.l;
+          document.getElementById("d-price").textContent = x.p;
+          document.getElementById("d-beds").textContent = x.b + " beds";
+          document.getElementById("d-baths").textContent = x.ba + " baths";
+          document.getElementById("d-area").textContent = x.a + " m²";
+          mainView.classList.add("hidden");
+          detail.classList.remove("hidden");
+          window.scrollTo(0, 0);
+        } else if (
+          !detail.classList.contains("hidden") &&
+          location.hash !== "#contact"
+        ) {
+          detail.classList.add("hidden");
+          mainView.classList.remove("hidden");
+          const t = location.hash && document.querySelector(location.hash);
+          t ? t.scrollIntoView() : window.scrollTo(0, 0);
+        }
+      }
+      window.addEventListener("hashchange", route);
+      route();
+      document.getElementById("d-tour").addEventListener("click", () => {
+        if (current)
+          document.getElementById("message").value =
+            `Hi, I’d like to schedule a tour of ${current.t} (${current.l}).`;
+        setTimeout(
+          () => document.getElementById("name").focus({ preventScroll: true }),
+          500,
+        );
+      });
 
       // Mobile menu
       const menuBtn = document.getElementById("menu-btn"),
